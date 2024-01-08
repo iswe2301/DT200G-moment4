@@ -1,0 +1,206 @@
+<!DOCTYPE html> <!-- HTML dokument -->
+<html lang="sv">
+
+<!-- Sidans huvud med metainformation, CSS, JS, titel, favicon -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/webshop.js" defer></script>
+    <title>VÅR STORY | ROASTERY MEKKA</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<!-- Sidans kropp -->
+
+<body>
+    <div></div>
+
+    <!-- Header -->
+    <header id="computerhead">
+        <!-- Logotyp med länk till startsida -->
+        <a href="index.html">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+        </a>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box">
+            <label for="search" aria-label="Sök efter information"></label>
+            <input type="text" id="search" placeholder="Sök efter information...">
+            <button id="searchbtn" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- Kassaikon med länk till kassan -->
+        <a href="checkout.html" aria-label="Gå till kassan"><i class="fa-solid fa-basket-shopping"></i><span
+                class="checkout-button" id="small-basket"></span></a>
+        <!-- Hamburgermeny för mobil -->
+        <button class="menubtn" aria-label="Huvudmeny">
+            <span class="menuicon">
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Meny med navigeringslänkar för datorläge -->
+    <nav id="computernav">
+        <div id="navlinks">
+            <ul>
+                <li><a href="index.html">HEM</a></li>
+                <li><a href="products.html">VÅRA PRODUKTER</a></li>
+                <li><a id="active" href="about.html">VÅR STORY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Meny med navigering för mobilen -->
+    <nav id="mobilenav">
+        <ul>
+            <li><a href="index.html">HEM</a></li>
+            <li><a href="products.html">VÅRA PRODUKTER</a></li>
+            <li><a id="mobileactive" href="about.html">VÅR STORY</a></li>
+        </ul>
+        <form id="search-box2">
+            <label for="search2">Sök efter information</label>
+            <input type="text" id="search2" placeholder="Skriv in sökord...">
+            <button id="searchbtn2" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <!-- Huvudrubrik -->
+        <h1 id="storyhead">VÅR STORY</h1>
+
+        <!-- Sektion med underrubrik och text -->
+        <section id="story1">
+            <h2>VÅR HISTORIA</h2>
+            <p>För många år sedan, i de djupa dalarna i Mellanöstern, hittade en äkta kaffeexpert vid namn Amir sin
+                kärlek till arabiskt kaffe. Han drömde om att dela denna underbara tradition med resten av världen. Det
+                var i
+                skuggan av de mäktiga bergslandskapen, där kaffeböndernas kunnande och odlingarnas rika jordmån skapade
+                en perfekt plats för Roastery Mekka att födas.</p>
+        </section>
+
+        <!-- Frilagd bild i webp/png beroende på webbläsarens stöd, lazy load -->
+        <picture id="beans1">
+            <source type="image/webp" srcset="images/freebeans.webp">
+            <source type="image/png" srcset="images/freebeans.png">
+            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica">
+        </picture>
+
+        <!-- Sektion med underrubrik och text -->
+        <section id="story2">
+            <h2>VÅRA BÖNOR</h2>
+            <p>Vi reser långt och brett för att handplocka de finaste Arabica-kaffebönorna. Varje böna bär på en
+                historia av hårt arbete och hängivenhet från de passionerade bönder som odlar dem. Från de frodiga
+                kaffefälten i Etiopien till de soliga sluttningarna i Colombia, väljer vi noga ut Arabica-bönor med
+                unika smaker som återspeglar deras ursprung.</p>
+        </section>
+        <!-- Frilagd bild i webp/png beroende på webbläsarens stöd, lazy load -->
+        <picture id="beans2">
+            <source type="image/webp" srcset="images/freebeans.webp">
+            <source type="image/png" srcset="images/freebeans.png">
+            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
+        </picture>
+
+        <!-- Sektion med underrubrik och text -->
+        <section id="story3">
+            <h2>VÅR ROSTNING</h2>
+            <p>Vår passion för arabiskt kaffe slutar inte vid odlingarna. På Roastery Mekka vet vi att konsten att rosta
+                kaffe är en konstform i sig. Våra kaffeexperter använder sig av traditionella metoder för att framhäva
+                smakerna och aromerna. Varje rostningsprocess är en kärleksfull
+                hyllning till de bönder och regioner som har odlat dessa fantastiska kaffebönor.</p>
+        </section>
+
+        <!-- Frilagd bild i webp/png beroende på webbläsarens stöd, lazy load -->
+        <picture id="beans3">
+            <source type="image/webp" srcset="images/freebeans.webp">
+            <source type="image/png" srcset="images/freebeans.png">
+            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
+        </picture>
+
+        <!-- Sektion med underrubrik och text -->
+        <section id="story4">
+            <h2>VÅR FRAMTID</h2>
+            <p>Vi tror att vår planet är lika viktig som vårt kaffe. Därför engagerar vi oss i ekologisk hållbarhet
+                från början till slut. Våra odlingar följer strikta ekologiska riktlinjer, och vi arbetar nära våra
+                samhällen för att säkerställa rättvisa arbetsvillkor och en positiv påverkan på miljön. Varje kopp av
+                vårt
+                Roastery Mekka kaffe är inte bara en smakupplevelse, utan en handling av omsorg för vår värld.</p>
+        </section>
+
+        <!-- Frilagd bild i webp/png beroende på webbläsarens stöd, lazy load -->
+        <picture id="beans4">
+            <source type="image/webp" srcset="images/freebeans.webp">
+            <source type="image/png" srcset="images/freebeans.png">
+            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
+        </picture>
+
+        <!-- Sektion med underrubrik och text -->
+        <section id="story5">
+            <h2>VÅR VISION</h2>
+            <p>Roastery Mekka strävar efter att vara en plats där varje kaffekopp är en resa. Från de första spadtagen
+                i jorden där våra bönor planteras, till den färdiga koppen som landar i dina händer. Vår historia är en
+                resa av smak, kärlek och respekt för naturen och människorna som skapar den.</p>
+            <p><strong>Välkommen till Roastery Mekka, där varje kopp representerar en kärleksfull hängivenhet till äkta
+                    arabiskt premiumkaffe.
+                </strong></p>
+        </section>
+
+        <!-- Frilagd bild i webp/png beroende på webbläsarens stöd, lazy load -->
+        <picture id="beans5">
+            <source type="image/webp" srcset="images/freebeans.webp">
+            <source type="image/png" srcset="images/freebeans.png">
+            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
+        </picture>
+    </main>
+
+    <!-- Footer med diverse länkar -->
+    <footer>
+        <div id="footer-content">
+            <div>
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Rosterivägen 4<br>123 45 Kaffeberga Sverige</li>
+                    <li><a href="tel:+4610123456"><i class="fa-solid fa-phone"></i> +46 10 123 456</a></li>
+                    <li><a href="mailto:info@roasterymekka.com"><i class="fa-regular fa-envelope"></i>
+                            info@roasterymekka.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Följ oss</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Snabblänkar</h2>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="products.html">Våra produkter</a></li>
+                    <li><a href="about.html">Vår story</a></li>
+                    <li><a href="checkout.html">Kassa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom-foot">
+            <ul>
+                <li>&copy; 2023 Isa Westling</li>
+                <li><a href="about2.html">Om webbplatsen</a></li>
+                <li><a href="index.html">Integritetspolicy</a></li>
+                <li><a href="index.html">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

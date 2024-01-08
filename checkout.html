@@ -1,0 +1,190 @@
+<!DOCTYPE html> <!-- HTML dokument -->
+<html lang="sv">
+
+<!-- Sidans huvud med metainformation, CSS, JS, titel, favicon -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/webshop.js" defer></script>
+    <title>KASSA | ROASTERY MEKKA</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<!-- Sidans kropp -->
+
+<body>
+    <div></div>
+
+    <!-- Header -->
+    <header id="computerhead">
+        <!-- Logotyp med länk till startsida -->
+        <a href="index.html">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+        </a>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box">
+            <label for="search" aria-label="Sök efter information"></label>
+            <input type="text" id="search" placeholder="Sök efter information...">
+            <button id="searchbtn" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- Kassaikon med länk till kassan -->
+        <a href="checkout.html" aria-label="Gå till kassan"><i class="fa-solid fa-basket-shopping"></i><span
+                class="checkout-button" id="small-basket"></span></a>
+        <!-- Hamburgermeny för mobil -->
+        <button class="menubtn" aria-label="Huvudmeny">
+            <span class="menuicon">
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Meny med navigeringslänkar för datorläge -->
+    <nav id="computernav">
+        <div id="navlinks">
+            <ul>
+                <li><a href="index.html">HEM</a></li>
+                <li><a href="products.html">VÅRA PRODUKTER</a></li>
+                <li><a href="about.html">VÅR STORY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Meny med navigering för mobilen -->
+    <nav id="mobilenav">
+        <ul>
+            <li><a href="index.html">HEM</a></li>
+            <li><a href="products.html">VÅRA PRODUKTER</a></li>
+            <li><a href="about.html">VÅR STORY</a></li>
+        </ul>
+        <form id="search-box2">
+            <label for="search2">Sök efter information</label>
+            <input type="text" id="search2" placeholder="Skriv in sökord...">
+            <button id="searchbtn2" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+
+    <!-- Huvudinnehåll, visas i flex -->
+    <main id="flex">
+
+        <!-- Brödsmulor med tillbakalänkar -->
+        <div id="breadcrumbs"><a href="index.html">Hem</a> / Kassa</div>
+
+        <!-- Huvudrubrik -->
+        <h1 id="storyhead">KASSA</h1>
+
+        <!-- Underrubrik, tabell som hämtar innehåll till body genom JS -->
+        <h2>Varukorg</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bild</th>
+                    <th id="article">Artikelnummer</th>
+                    <th>Namn</th>
+                    <th>Antal</th>
+                    <th>Pris</th>
+                </tr>
+            </thead>
+            <tbody id="checkout"></tbody>
+        </table>
+
+        <!-- Knapp för att tömma varukorgen med JS -->
+        <button class="checkout-button" id="emptybtn" onclick="emptyBasket()">Töm varukorgen</button>
+
+        <!-- Formulär för leveransuppgifter, autocomplete på -->
+        <div class="checkout-button">
+            <h3>Leveransuppgifter</h3>
+            <form id="checkout-form" action="checkout.html" method="post" autocomplete="on">
+                <fieldset>
+                    <!-- Obligatoriskt fält, placeholder -->
+                    <label for="name">Namn:</label><br>
+                    <input type="text" placeholder="Förnamn Efternamn" id="name" required><br>
+
+                    <label for="email">E-post:</label><br>
+                    <input type="email" placeholder="namn@domän.se" id="email" required><br>
+
+                    <label for="phone">Telefonnummer:</label><br>
+                    <input type="tel" placeholder="07X XXX XX XX" id="phone"><br>
+
+                    <label for="adress">Adress:</label><br>
+                    <input type="text" placeholder="Ange din adress" id="adress" required><br>
+
+                    <label for="postnmbr">Postnummer:</label><br>
+                    <input type="text" placeholder="123 45" id="postnmbr" required><br>
+
+                    <label for="city">Ort:</label><br>
+                    <input type="text" placeholder="Ange din ort" id="city" required><br>
+
+                    <!-- Rullist för att välja betalningstyp -->
+                    <label for="payment">Betalningsmedel:</label><br>
+                    <select id="payment" name="payment" required>
+                        <option value="">Välj betalningsmedel</option>
+                        <option value="card">Kort</option>
+                        <option value="klarna">Klarna</option>
+                        <option value="invoice">Faktura</option>
+                        <option value="swish">Swish</option>
+                    </select><br>
+
+                    <!-- Checkbox för att acceptera köpvillkoren -->
+                    <input type="checkbox" id="confirm" required>
+                    <label for="confirm">Jag accepterar köpvillkoren</label><br>
+
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Knapp för att genomföra köpet med JS -->
+        <button id="buybtn2" onclick="checkoutBasket()">Genomför köpet</button>
+    </main>
+
+    <!-- Footer med diverse länkar -->
+    <footer>
+        <div id="footer-content">
+            <div>
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Rosterivägen 4<br>123 45 Kaffeberga Sverige</li>
+                    <li><a href="tel:+4610123456"><i class="fa-solid fa-phone"></i> +46 10 123 456</a></li>
+                    <li><a href="mailto:info@roasterymekka.com"><i class="fa-regular fa-envelope"></i>
+                            info@roasterymekka.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Följ oss</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Snabblänkar</h2>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="products.html">Våra produkter</a></li>
+                    <li><a href="about.html">Vår story</a></li>
+                    <li><a href="checkout.html">Kassa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom-foot">
+            <ul>
+                <li>&copy; 2023 Isa Westling</li>
+                <li><a href="about2.html">Om webbplatsen</a></li>
+                <li><a href="index.html">Integritetspolicy</a></li>
+                <li><a href="index.html">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

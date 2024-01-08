@@ -1,0 +1,212 @@
+<!DOCTYPE html> <!-- HTML dokument -->
+<html lang="sv">
+
+<!-- Sidans huvud med metainformation, CSS, JS, titel -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/webshop.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
+    <title>ROASTERY MEKKA DALLAH GOLD | ROASTERY MEKKA</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<!-- Sidans kropp -->
+
+<body>
+    <div></div>
+
+    <!-- Header -->
+    <header id="computerhead">
+        <!-- Logotyp med länk till startsida -->
+        <a href="index.html">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+        </a>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box">
+            <label for="search" aria-label="Sök efter information"></label>
+            <input type="text" id="search" placeholder="Sök efter information...">
+            <button id="searchbtn" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- Kassaikon med länk till kassan -->
+        <a href="checkout.html" aria-label="Gå till kassan"><i class="fa-solid fa-basket-shopping"></i><span
+                class="checkout-button" id="small-basket"></span></a>
+        <!-- Hamburgermeny för mobil -->
+        <button class="menubtn" aria-label="Huvudmeny">
+            <span class="menuicon">
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Meny med navigeringslänkar för datorläge -->
+    <nav id="computernav">
+        <div id="navlinks">
+            <ul>
+                <li><a href="index.html">HEM</a></li>
+                <li><a id="active" href="products.html">VÅRA PRODUKTER</a></li>
+                <li><a href="about.html">VÅR STORY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Meny med navigering för mobilen -->
+    <nav id="mobilenav">
+        <ul>
+            <li><a href="index.html">HEM</a></li>
+            <li><a id="mobileactive" href="products.html">VÅRA PRODUKTER</a></li>
+            <li><a href="about.html">VÅR STORY</a></li>
+        </ul>
+        <form id="search-box2">
+            <label for="search2">Sök efter information</label>
+            <input type="text" id="search2" placeholder="Skriv in sökord...">
+            <button id="searchbtn2" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+
+    <!-- Huvudinnehåll -->
+    <main id="product-grid">
+
+        <!-- Brödsmulor med tillbakalänkar -->
+        <div id="breadcrumbs"><a href="products.html">Våra produkter</a> / <a
+                href="products.html#itemsubhead2">Tillbehör</a> / Roastery Mekka Dallah Gold</div>
+
+        <!-- Sektion med huvudrubrik, text, pris, knapp för att lägga till i varukorg (JS) samt notis -->
+        <section id="coffeesection">
+            <h3>Roastery Mekka Dallah Gold</h3>
+            <p><strong>Roastery Mekka Dallah är ett handgjort mästerverk skapad för att förgylla din kaffestund.
+                </strong><br><br>Denna orientaliska kaffekanna, även känd som "dallah", är tillverkad i en rik guldton
+                som framhäver kannans konstnärliga stil. Tillverkad av högkvalitativ metall representerar Roastery
+                Mekka Dallah den perfekta kombinationen av elegans och kvalitet.</p>
+            <p>Finns även i <a href="dallah2.html">Silver</a></p>
+            <span id="price">229 SEK</span>
+            <button
+                onclick="addToBasket(this, '05', 'Roastery Mekka Dallah Gold', '229', 'images/dallah1_mini.jpg', true)"
+                id="buybtn">Lägg till i varukorgen <i class="fa fa-basket-shopping"></i></button>
+            <span id="notify"></span>
+        </section>
+
+        <!-- Produktbilder i bildspel som visas genom Lightbox, lazy load -->
+        <div id="productimg">
+            <div id="small-prod">
+                <div id="coffee1">
+                    <a href="images/dallah1.jpg" data-lightbox="coffee-images">
+                        <!-- WebP-version -->
+                        <picture>
+                            <source srcset="images/dallah1_small.webp" type="image/webp">
+                            <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
+                            <img src="images/dallah1_small.jpg" width="450" height="338"
+                                alt="Kaffekanna Roastery Mekka Dallah Gold">
+                        </picture>
+                    </a>
+                </div>
+                <div id="coffee2">
+                    <a href="images/dallah2.jpg" data-lightbox="coffee-images">
+                        <!-- WebP-version -->
+                        <picture>
+                            <source srcset="images/dallah2_small.webp" type="image/webp">
+                            <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
+                            <img src="images/dallah2_small.jpg" width="450" height="338"
+                                alt="Kaffekanna Roastery Mekka Dallah Gold" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div id="coffee3">
+                <a href="images/dallah3.jpg" data-lightbox="coffee-images">
+                    <!-- WebP-version -->
+                    <picture>
+                        <source srcset="images/dallah3_small.webp" type="image/webp">
+                        <!-- Fallback till PNG om webbläsaren inte stöder WebP -->
+                        <img src="images/dallah3_small.png" width="380" height="600"
+                            alt="Kaffekanna Roastery Mekka Dallah Gold" loading="lazy">
+                    </picture>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sektion med underrubriker, o-ordnad lista och paragrafer -->
+        <section id="coffeesection2">
+            <h4>Egenskaper</h4>
+            <p><strong>Material: </strong>100 % högkvalitativ metall.<br>
+                <strong>Design: </strong>Handtillverkad i traditionell orientalisk form.<br>
+                <strong>Förpackningens innehåll: </strong>En (1) Roastery Mekka Dallah i guldfärg.
+            </p>
+            <h4>Specifikationer</h4>
+            <ul>
+                <li>Färg: Guld</li>
+                <li>Diameter: 8 cm</li>
+                <li>Höjd: 9 cm</li>
+                <li>Vikt: 380 gram</li>
+                <li>Volym: 425 ml</li>
+            </ul>
+            <h4>Hållbarhet och Kvalitet</h4>
+            <p>Vi på Roastery Mekka strävar efter att erbjuda produkter av högsta kvalitet. Varje kopp är noga
+                kontrollerad för att säkerställa att den uppfyller våra standarder.
+            </p>
+            <p>För att bevara kaffekannans glans och finish rekommenderar vi handdiskning med milda rengöringsmedel och
+                undvikande av repande material.
+            </p>
+        </section>
+
+        <!-- Bild som visas i webp/png beroende på webbläsarens kompabilitet -->
+        <picture id="beans6">
+            <source type="image/webp" srcset="images/freebeans.webp">
+            <source type="image/png" srcset="images/freebeans.png">
+            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
+        </picture>
+    </main>
+
+    <!-- Footer med diverse länkar -->
+    <footer>
+        <div id="footer-content">
+            <div>
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Rosterivägen 4<br>123 45 Kaffeberga Sverige</li>
+                    <li><a href="tel:+4610123456"><i class="fa-solid fa-phone"></i> +46 10 123 456</a></li>
+                    <li><a href="mailto:info@roasterymekka.com"><i class="fa-regular fa-envelope"></i>
+                            info@roasterymekka.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Följ oss</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Snabblänkar</h2>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="products.html">Våra produkter</a></li>
+                    <li><a href="about.html">Vår story</a></li>
+                    <li><a href="checkout.html">Kassa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom-foot">
+            <ul>
+                <li>&copy; 2023 Isa Westling</li>
+                <li><a href="about2.html">Om webbplatsen</a></li>
+                <li><a href="index.html">Integritetspolicy</a></li>
+                <li><a href="index.html">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

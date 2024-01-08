@@ -1,0 +1,205 @@
+<!DOCTYPE html> <!-- HTML dokument -->
+<html lang="sv">
+
+<!-- Sidans huvud med metainformation, CSS, JS, titel, favicon -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/webshop.js" defer></script>
+    <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
+    <title>VÅRA PRODUKTER | ROASTERY MEKKA</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<!-- Sidans kropp -->
+
+<body id="whitebackground">
+    <div></div>
+
+    <!-- Header -->
+    <header id="computerhead">
+        <!-- Logotyp med länk till startsida -->
+        <a href="index.html">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+        </a>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box">
+            <label for="search" aria-label="Sök efter information"></label>
+            <input type="text" id="search" placeholder="Sök efter information...">
+            <button id="searchbtn" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- Kassaikon med länk till kassan -->
+        <a href="checkout.html" aria-label="Gå till kassan"><i class="fa-solid fa-basket-shopping"></i><span
+                class="checkout-button" id="small-basket"></span></a>
+        <!-- Hamburgermeny för mobil -->
+        <button class="menubtn" aria-label="Huvudmeny">
+            <span class="menuicon">
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Meny med navigeringslänkar för datorläge -->
+    <nav id="computernav">
+        <div id="navlinks">
+            <ul>
+                <li><a href="index.html">HEM</a></li>
+                <li><a id="active" href="products.html">VÅRA PRODUKTER</a></li>
+                <li><a href="about.html">VÅR STORY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Meny med navigering för mobilen -->
+    <nav id="mobilenav">
+        <ul>
+            <li><a href="index.html">HEM</a></li>
+            <li><a id="mobileactive" href="products.html">VÅRA PRODUKTER</a></li>
+            <li><a href="about.html">VÅR STORY</a></li>
+        </ul>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box2">
+            <label for="search2">Sök efter information</label>
+            <input type="text" id="search2" placeholder="Skriv in sökord...">
+            <button id="searchbtn2" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <!-- Huvudrubrik -->
+        <h1 id="itemhead">VÅRA PRODUKTER</h1>
+        <!-- Underrubrik -->
+        <h2 id="itemsubhead">KAFFESORTER</h2>
+
+        <!-- Produktbild i webp/png beroende på webbläsarens stöd, länk till specifik produktsida -->
+        <div id="prod1">
+            <a href="coffee1.html">
+                <h3>Roastery Mekka Selection</h3>
+                <picture>
+                    <source type="image/webp" srcset="images/mekkaselection.webp">
+                    <source type="image/png" srcset="images/mekkaselection.png">
+                    <img src="images/mekkaselection.png" width="500" height="500" alt="Kaffe Mekka Selection">
+                </picture>
+            </a>
+        </div>
+
+        <!-- Produktbild i webp/png beroende på webbläsarens stöd, länk till specifik produktsida -->
+        <div id="prod2">
+            <a href="coffee2.html">
+                <h3>Roastery Mekka Gold</h3>
+                <picture>
+                    <source type="image/webp" srcset="images/mekkagold.webp">
+                    <source type="image/png" srcset="images/mekkagold.png">
+                    <img src="images/mekkagold.png" width="500" height="500" alt="Kaffe Mekka Gold" loading="lazy">
+                </picture>
+            </a>
+        </div>
+
+        <h2 id="itemsubhead2">TILLBEHÖR</h2>
+
+        <!-- Produktbild i webp/png beroende på webbläsarens stöd, länk till specifik produktsida -->
+        <div id="prod3">
+            <a href="cup1.html">
+                <h3>Roastery Mekka Arabic Cup</h3>
+                <picture>
+                    <source type="image/webp" srcset="images/arabiccup.webp">
+                    <source type="image/png" srcset="images/arabiccup.png">
+                    <img src="images/arabiccup.png" width="500" height="500" alt="Arabisk kaffekopp med blått motiv"
+                        loading="lazy">
+                </picture>
+            </a>
+        </div>
+
+        <!-- Produktbild i webp/png beroende på webbläsarens stöd, länk till specifik produktsida -->
+        <div id="prod4">
+            <a href="cup2.html">
+                <h3>Roastery Mekka Clear Cup</h3>
+                <picture>
+                    <source type="image/webp" srcset="images/clearcup.webp">
+                    <source type="image/png" srcset="images/clearcup.png">
+                    <img src="images/clearcup.png" width="500" height="500" alt="Kaffekopp i genomskinligt glas"
+                        loading="lazy">
+                </picture>
+            </a>
+        </div>
+
+        <!-- Produktbild i webp/png beroende på webbläsarens stöd, länk till specifik produktsida -->
+        <div id="prod5">
+            <a href="dallah1.html">
+                <h3>Roastery Mekka Dallah Gold</h3>
+                <picture>
+                    <source type="image/webp" srcset="images/dallah.webp">
+                    <source type="image/png" srcset="images/dallah.png">
+                    <img src="images/dallah.png" width="500" height="500" alt="Arabisk kaffekanna i guld"
+                        loading="lazy">
+                </picture>
+            </a>
+        </div>
+
+        <!-- Produktbild i webp/png beroende på webbläsarens stöd, länk till specifik produktsida -->
+        <div id="prod6">
+            <a href="dallah2.html">
+                <h3>Roastery Mekka Dallah Silver</h3>
+                <picture>
+                    <source type="image/webp" srcset="images/dallah2.webp">
+                    <source type="image/png" srcset="images/dallah2.png">
+                    <img src="images/dallah2.png" width="500" height="500" alt="Arabisk kaffekanna i silver"
+                        loading="lazy">
+                </picture>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer med diverse länkar -->
+    <footer>
+        <div id="footer-content">
+            <div>
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Rosterivägen 4<br>123 45 Kaffeberga Sverige</li>
+                    <li><a href="tel:+4610123456"><i class="fa-solid fa-phone"></i> +46 10 123 456</a></li>
+                    <li><a href="mailto:info@roasterymekka.com"><i class="fa-regular fa-envelope"></i>
+                            info@roasterymekka.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Följ oss</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Snabblänkar</h2>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="products.html">Våra produkter</a></li>
+                    <li><a href="about.html">Vår story</a></li>
+                    <li><a href="checkout.html">Kassa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom-foot">
+            <ul>
+                <li>&copy; 2023 Isa Westling</li>
+                <li><a href="about2.html">Om webbplatsen</a></li>
+                <li><a href="index.html">Integritetspolicy</a></li>
+                <li><a href="index.html">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

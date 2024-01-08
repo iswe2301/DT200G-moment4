@@ -1,0 +1,109 @@
+<!DOCTYPE html> <!-- HTML dokument -->
+<html lang="sv">
+
+<!-- Sidans huvud med metainformation, CSS, JS, titel, favicon -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/webshop.js" defer></script>
+    <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
+    <title>ROASTERY MEKKA</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<!-- Sidans kropp -->
+
+<body>
+    <div></div>
+
+    <!-- Header -->
+    <header id="computerhead">
+        <!-- Logotyp med länk till startsida -->
+        <a href="index.html">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+        </a>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box">
+            <label for="search" aria-label="Sök efter information"></label>
+            <input type="text" id="search" placeholder="Sök efter information...">
+            <button id="searchbtn" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- Kassaikon med länk till kassan -->
+        <a href="checkout.html" aria-label="Gå till kassan"><i class="fa-solid fa-basket-shopping"></i><span
+                class="checkout-button" id="small-basket"></span></a>
+        <!-- Hamburgermeny för mobil -->
+        <button class="menubtn" aria-label="Huvudmeny">
+            <span class="menuicon">
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Meny med navigeringslänkar för datorläge -->
+    <nav id="computernav">
+        <div id="navlinks">
+            <ul>
+                <li><a id="active" href="index.html">HEM</a></li>
+                <li><a href="products.html">VÅRA PRODUKTER</a></li>
+                <li><a href="about.html">VÅR STORY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Meny med navigeringslänkar för mobilen -->
+    <nav id="mobilenav">
+        <ul>
+            <li><a id="mobileactive" href="index.html">HEM</a></li>
+            <li><a href="products.html">VÅRA PRODUKTER</a></li>
+            <li><a href="about.html">VÅR STORY</a></li>
+        </ul>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box2">
+            <label for="search2">Sök efter information</label>
+            <input type="text" id="search2" placeholder="Skriv in sökord...">
+            <button id="searchbtn2" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+
+    <!-- Picturetagg med olika storlekar på bakgrundsbild som visas beroende på skärmstorlek -->
+    <picture id="background">
+        <source type="image/jpeg" media="(min-width: 701px) and (max-width: 1200px)" srcset="images/beans_medium.jpg">
+        <source type="image/jpeg" media="(max-width: 700px)" srcset="images/beans_small.jpg">
+        <img id="headerimg" src="images/beans_large.jpg" alt="Kaffebönor" loading="lazy">
+    </picture>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <!-- Sektion med huvudrubrik, citat, knapp med länk till produkter (triggas med JS) samt större logotyp -->
+        <section id="item1">
+            <h1>Med passion<br>för aromer</h1>
+            <p>Välkommen till Roastery Mekka, där varje kaffekopp är en resa genom orientaliska smakerexplosioner. Vi är
+                mer än bara kaffekonst; vi är <em>passion</em>, <em>kvalitet</em> och <em>hållbarhet</em>. Vårt
+                sortiment
+                av noga utvalda bönor bjuder
+                in
+                till
+                minnesvärda stunder av fyllig och aromatisk njutning.</p>
+            <blockquote>
+                <p>En resa från jord till kopp, där passion för orientaliskt kaffe möter ekologisk hållbarhet.
+                </p>
+            </blockquote>
+            <button id="firstbtn" onclick="goToProducts()">KAFFESUGEN?<i
+                    class='fas fa-long-arrow-alt-right'></i></button>
+        </section>
+        <div id="item2">
+            <img src="images/logo_large.svg" width="500" height="500" alt="Roastery Mekka logotyp">
+        </div>
+    </main>
+
+</body>
+
+</html>

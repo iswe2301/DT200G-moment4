@@ -1,0 +1,148 @@
+<!DOCTYPE html> <!-- HTML dokument -->
+<html lang="sv">
+
+<!-- Sidans huvud med metainformation, CSS, JS, titel -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
+    <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/webshop.js" defer></script>
+    <title>OM WEBBPLATSEN | ROASTERY MEKKA</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<!-- Sidans kropp -->
+
+<body>
+    <div></div>
+
+    <!-- Header -->
+    <header id="computerhead">
+        <!-- Logotyp med länk till startsida -->
+        <a href="index.html">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+        </a>
+        <!-- Formulär för sök-input med ikon -->
+        <form id="search-box">
+            <label for="search" aria-label="Sök efter information"></label>
+            <input type="text" id="search" placeholder="Sök efter information...">
+            <button id="searchbtn" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- Kassaikon med länk till kassan -->
+        <a href="checkout.html" aria-label="Gå till kassan"><i class="fa-solid fa-basket-shopping"></i><span
+                class="checkout-button" id="small-basket"></span></a>
+        <!-- Hamburgermeny för mobil -->
+        <button class="menubtn" aria-label="Huvudmeny">
+            <span class="menuicon">
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </span>
+        </button>
+    </header>
+
+    <!-- Meny med navigeringslänkar för datorläge -->
+    <nav id="computernav">
+        <div id="navlinks">
+            <ul>
+                <li><a href="index.html">HEM</a></li>
+                <li><a href="products.html">VÅRA PRODUKTER</a></li>
+                <li><a href="about.html">VÅR STORY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Meny med navigering för mobilen -->
+    <nav id="mobilenav">
+        <ul>
+            <li><a href="index.html">HEM</a></li>
+            <li><a href="products.html">VÅRA PRODUKTER</a></li>
+            <li><a href="about.html">VÅR STORY</a></li>
+        </ul>
+        <form id="search-box2">
+            <label for="search2">Sök efter information</label>
+            <input type="text" id="search2" placeholder="Skriv in sökord...">
+            <button id="searchbtn2" aria-label="Sök"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <!-- Brödsmulor med tillbakalänkar -->
+        <div id="breadcrumbs"><a href="index.html">Hem</a> / Om webbplatsen</div>
+
+        <!-- Huvudrubrik -->
+        <h1 id="storyhead">OM WEBB&shy;PLATSEN</h1>
+
+        <!-- Sektion med underrubrik, text samt signatur (SVG-bild) -->
+        <section id="story1">
+            <h2>Isa Westling</h2>
+            <p>Webbplatsen är framtagen och utvecklad av Isa Westling, student på Mittuniversitetets program
+                Webbutveckling. Webbplatsen har skapats som ett projekt i kursen Grafisk teknik för webb med fokus på
+                webboptimering. Uppgiften gick ut på att skapa en komplett webbplats för ett fiktivt företag i form av
+                en
+                webbutik.
+            </p>
+            <p>De metoder som har använts i skapandet av webbplatsen är HTML, CSS och JavaScript i kombination med
+                webboptimerat matrial. Allt material i form av bilder, video och logotyp har skapats och behandlats
+                av mig själv. </p>
+            <img src="images/signature.svg" width="600" height="217" alt="Isa Westling signatur">
+        </section>
+
+        <!-- Porträttbild i webp/png beroende på webbläsarens stöd, lazy-load -->
+        <picture id="beans1">
+            <source type="image/webp" srcset="images/isa.webp">
+            <source type="image/png" srcset="images/isa.png">
+            <img src="images/isa.png" width="600" height="600" alt="Porträtt Isa Westling" loading="lazy">
+        </picture>
+    </main>
+
+    <!-- Footer med diverse länkar -->
+    <footer>
+        <div id="footer-content">
+            <div>
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Rosterivägen 4<br>123 45 Kaffeberga Sverige</li>
+                    <li><a href="tel:+4610123456"><i class="fa-solid fa-phone"></i> +46 10 123 456</a></li>
+                    <li><a href="mailto:info@roasterymekka.com"><i class="fa-regular fa-envelope"></i>
+                            info@roasterymekka.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Följ oss</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Snabblänkar</h2>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="products.html">Våra produkter</a></li>
+                    <li><a href="about.html">Vår story</a></li>
+                    <li><a href="checkout.html">Kassa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom-foot">
+            <ul>
+                <li>&copy; 2023 Isa Westling</li>
+                <li><a href="about2.html">Om webbplatsen</a></li>
+                <li><a href="index.html">Integritetspolicy</a></li>
+                <li><a href="index.html">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
