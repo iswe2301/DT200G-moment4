@@ -18,6 +18,7 @@
         font-size: 1.6rem;
         line-height: 2.8rem;
         font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        font-weight: 400;
         background-color: #EBD9C1;
         color: black;
         height: 100%;
@@ -54,6 +55,7 @@
         width: 100%;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.70);
         font-family: "Montserrat", "Roboto", Arial, sans-serif;
+        font-weight: 400;
         letter-spacing: 0.5rem;
         z-index: 1;
     }
@@ -796,7 +798,7 @@
         font-size: 3.6rem;
         font-family: "Montserrat", 'Roboto', Helvetica, sans-serif;
         color: black;
-        font-weight: bold;
+        font-weight: 700;
         text-align: center;
         margin: 4rem 0 0 0;
         letter-spacing: 0.5rem;
