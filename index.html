@@ -9,6 +9,9 @@
     <meta name="description"
         content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
     <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="preload" as="font">
     <script src="javascript/main.js" defer></script>
     <script src="javascript/webshop.js" defer></script>
     <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
@@ -26,7 +29,7 @@
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
         <a href="index.html">
-            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp">
         </a>
         <!-- Formulär för sök-input med ikon -->
         <form id="search-box">
@@ -77,7 +80,7 @@
     <picture id="background">
         <source type="image/jpeg" media="(min-width: 701px) and (max-width: 1200px)" srcset="images/beans_medium.jpg">
         <source type="image/jpeg" media="(max-width: 700px)" srcset="images/beans_small.jpg">
-        <img id="headerimg" src="images/beans_large.jpg" alt="Kaffebönor" loading="lazy">
+        <img id="headerimg" src="images/beans_large.jpg" alt="Kaffebönor">
     </picture>
 
     <!-- Huvudinnehåll -->
@@ -100,7 +103,7 @@
                     class='fas fa-long-arrow-alt-right'></i></button>
         </section>
         <div id="item2">
-            <img src="images/logo_large.svg" width="500" height="500" alt="Roastery Mekka logotyp">
+            <img fetchpriority="high" src="images/logo_large.svg" width="500" height="500" alt="Roastery Mekka logotyp">
         </div>
     </main>
 

@@ -9,6 +9,9 @@
     <meta name="description"
         content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
     <link href="css/stylesheet.css" rel="stylesheet" media="screen">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="preload" as="font">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
     <script src="javascript/main.js" defer></script>
     <script src="javascript/webshop.js" defer></script>
@@ -28,7 +31,7 @@
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
         <a href="index.html">
-            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp">
         </a>
         <!-- Formulär för sök-input med ikon -->
         <form id="search-box">
@@ -104,7 +107,7 @@
                         <picture>
                             <source srcset="images/cup1_small.webp" type="image/webp">
                             <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
-                            <img src="images/cup1_small.jpg" width="450" height="338"
+                            <img fetchpriority="high" src="images/cup1_small.jpg" width="450" height="338"
                                 alt="Kaffekopp Roastery Mekka Arabic Cup">
                         </picture>
                     </a>
