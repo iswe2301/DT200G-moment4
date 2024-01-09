@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+        rel="preload" as="style">
     <script src="javascript/main.js" defer></script>
     <script src="javascript/webshop.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js" defer></script>
@@ -111,7 +111,7 @@
                         <picture>
                             <source srcset="images/dallah4_small.webp" type="image/webp">
                             <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
-                            <img src="images/dallah4_small.jpg" width="450" height="338"
+                            <img fetchpriority="high" src="images/dallah4_small.jpg" width="450" height="338"
                                 alt="Kaffekanna Roastery Mekka Dallah Silver">
                         </picture>
                     </a>
@@ -122,7 +122,7 @@
                         <picture>
                             <source srcset="images/dallah5_small.webp" type="image/webp">
                             <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
-                            <img fetchpriority="high" src="images/dallah5_small.jpg" width="450" height="338"
+                            <img src="images/dallah5_small.jpg" width="450" height="338"
                                 alt="Kaffekanna Roastery Mekka Dallah Silver" loading="lazy">
                         </picture>
                     </a>

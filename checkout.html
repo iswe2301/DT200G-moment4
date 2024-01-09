@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+        rel="preload" as="style">
     <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
     <script src="javascript/main.js" defer></script>
     <script src="javascript/webshop.js" defer></script>
@@ -88,7 +88,7 @@
 
         <!-- Underrubrik, tabell som hämtar innehåll till body genom JS -->
         <h2>Varukorg</h2>
-        <table style="min-height: 98px;">
+        <table>
             <thead>
                 <tr>
                     <th>Bild</th>
@@ -102,11 +102,11 @@
         </table>
 
         <!-- Knapp för att tömma varukorgen med JS -->
-        <button class="checkout-button" id="emptybtn" onclick="emptyBasket()" style="min-height: 45px;">Töm
+        <button class="checkout-button" id="emptybtn" onclick="emptyBasket()">Töm
             varukorgen</button>
 
         <!-- Formulär för leveransuppgifter, autocomplete på -->
-        <div class="checkout-button" style="min-height:661px;">
+        <div class="checkout-button">
             <h3>Leveransuppgifter</h3>
             <form id="checkout-form" action="checkout.html" method="post" autocomplete="on">
                 <fieldset>
@@ -144,7 +144,7 @@
                     <label for="confirm">Jag accepterar köpvillkoren</label><br>
 
                     <!-- Knapp för att genomföra köpet med JS -->
-                    <button id="buybtn2" onclick="checkoutBasket()" style="min-height: 45px;">Genomför köpet</button>
+                    <button id="buybtn2" onclick="checkoutBasket()">Genomför köpet</button>
                 </fieldset>
             </form>
         </div>
