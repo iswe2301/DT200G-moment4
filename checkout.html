@@ -9,9 +9,11 @@
     <meta name="description"
         content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
     <link href="css/stylesheet.css" rel="stylesheet" media="screen">
-    <link rel="preload" as="style"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
-        crossorigin="anonymous">
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
     <script src="javascript/main.js" defer></script>
     <script src="javascript/webshop.js" defer></script>
@@ -29,7 +31,7 @@
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
         <a href="index.html">
-            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp" loading="lazy">
+            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp">
         </a>
         <!-- Formulär för sök-input med ikon -->
         <form id="search-box">
@@ -76,7 +78,7 @@
     </nav>
 
     <!-- Huvudinnehåll, visas i flex -->
-    <main id="flex">
+    <main id="flex" style="min-height: 100%;">
 
         <!-- Brödsmulor med tillbakalänkar -->
         <div id="breadcrumbs"><a href="index.html">Hem</a> / Kassa</div>
@@ -86,7 +88,7 @@
 
         <!-- Underrubrik, tabell som hämtar innehåll till body genom JS -->
         <h2>Varukorg</h2>
-        <table>
+        <table style="min-height: 98px;">
             <thead>
                 <tr>
                     <th>Bild</th>
@@ -100,10 +102,11 @@
         </table>
 
         <!-- Knapp för att tömma varukorgen med JS -->
-        <button class="checkout-button" id="emptybtn" onclick="emptyBasket()">Töm varukorgen</button>
+        <button class="checkout-button" id="emptybtn" onclick="emptyBasket()" style="min-height: 45px;">Töm
+            varukorgen</button>
 
         <!-- Formulär för leveransuppgifter, autocomplete på -->
-        <div class="checkout-button">
+        <div class="checkout-button" style="min-height:661px;">
             <h3>Leveransuppgifter</h3>
             <form id="checkout-form" action="checkout.html" method="post" autocomplete="on">
                 <fieldset>
@@ -140,12 +143,11 @@
                     <input type="checkbox" id="confirm" required>
                     <label for="confirm">Jag accepterar köpvillkoren</label><br>
 
+                    <!-- Knapp för att genomföra köpet med JS -->
+                    <button id="buybtn2" onclick="checkoutBasket()" style="min-height: 45px;">Genomför köpet</button>
                 </fieldset>
             </form>
         </div>
-
-        <!-- Knapp för att genomföra köpet med JS -->
-        <button id="buybtn2" onclick="checkoutBasket()">Genomför köpet</button>
     </main>
 
     <!-- Footer med diverse länkar -->

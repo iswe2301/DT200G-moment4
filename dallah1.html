@@ -10,9 +10,11 @@
         content="Roastery Mekkas erbjuder ekologiskt arabiskt kaffe med passion för kvalitet. Utforska vårt sortiment av noga utvalda Arabica-bönor och låt oss tillsammans skapa minnen över en kopp fyllig och aromatisk njutning.">
     <link href="css/stylesheet.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
-    <link rel="preload" as="style"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
-        crossorigin="anonymous">
+        rel="stylesheet">
     <script src="javascript/main.js" defer></script>
     <script src="javascript/webshop.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js" defer></script>
@@ -131,7 +133,7 @@
                     <picture>
                         <source srcset="images/dallah3_small.webp" type="image/webp">
                         <!-- Fallback till PNG om webbläsaren inte stöder WebP -->
-                        <img src="images/dallah3_small.png" width="380" height="600"
+                        <img id="dallahimg" src="images/dallah3_small.png" width="380" height="600"
                             alt="Kaffekanna Roastery Mekka Dallah Gold" loading="lazy">
                     </picture>
                 </a>
