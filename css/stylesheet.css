@@ -69,10 +69,6 @@
         margin: 0;
     }
 
-    .checkout-button {
-        display: none;
-    }
-
     /* Tar bort listprickar */
     #navlinks ul li {
         list-style-type: none;
