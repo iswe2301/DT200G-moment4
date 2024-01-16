@@ -30,13 +30,30 @@
         height: auto;
     }
 
+    /* Tar bort border för bildspel */
+    .bx-wrapper {
+        border: none !important;
+        min-height: 100px !important;
+    }
+
+    /* Minskar z-index */
+    .bx-wrapper .bx-next,
+    .bx-wrapper .bx-prev {
+        z-index: 1 !important;
+    }
+
+    .bx-wrapper img {
+        max-height: 1080px;
+        object-fit: cover;
+    }
+
     /* Styling och position för header */
     #computerhead {
         background-color: #30190D;
         display: flex;
         justify-content: center;
         position: fixed;
-        top: 0;
+        top: 2.8rem;
         left: 0;
         width: 100%;
         min-height: 99px;
@@ -50,7 +67,7 @@
         display: flex;
         justify-content: center;
         position: fixed;
-        top: 99px;
+        top: 127px;
         left: 0;
         padding: 10px 0;
         width: 100%;
@@ -58,7 +75,7 @@
         font-family: "Montserrat", "Roboto", Arial, sans-serif;
         font-weight: 400;
         letter-spacing: 0.5rem;
-        z-index: 1;
+        z-index: 2;
     }
 
     /* Visar lista i flex row */
@@ -95,7 +112,7 @@
     main {
         display: grid;
         grid-template-columns: auto auto;
-        margin: 147px auto 0;
+        margin: 175px auto 0;
         width: 80%;
         height: auto;
         max-width: 1200px;
@@ -104,6 +121,11 @@
     /* Större max-bredd för produktsidorna */
     #product-grid {
         max-width: 1400px !important;
+        grid-template-columns: 62% 38%;
+    }
+
+    #product-main {
+        margin: 0 auto;
     }
 
     /* Visas i flex istället för grid */
@@ -175,12 +197,17 @@
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
     }
 
-    input[type="checkbox"] {
+    input[type="checkbox"],
+    input[type="radio"] {
         vertical-align: middle;
         max-width: 20px;
         margin-bottom: 0.3rem;
         width: 2rem !important;
         height: 2rem;
+    }
+
+    #delivery-box {
+        margin-bottom: 1rem;
     }
 
     label {
@@ -190,7 +217,7 @@
     /* Styling och position för brödsmulor */
     #breadcrumbs {
         position: absolute;
-        top: 200px;
+        top: 230px;
         font-size: 1.4rem;
         color: black;
     }
@@ -235,6 +262,35 @@
         margin-top: 1rem;
     }
 
+    /* Döljer text initalt */
+    .text {
+        display: none;
+    }
+
+    .accordion {
+        font-size: 1.8rem;
+        background-color: #EBD9C1;
+        border: none;
+        margin: 2rem 0 1rem 0;
+        font-family: "Montserrat", 'Roboto', Helvetica, sans-serif;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Nyhetsbrev knapp */
+    #news {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.4rem;
+        font-family: "Montserrat", 'Roboto', Helvetica, sans-serif;
+        color: white;
+        background-color: #9C4517;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
     /* --------------------------------- GRID ITEMS -------------------------------- */
 
     /* Postion och styling för grid-item */
@@ -271,7 +327,7 @@
     #itemhead {
         grid-row: 1;
         grid-column: 1 / span 2;
-        margin-top: 12rem;
+        margin-top: 5rem;
     }
 
     /* Postion för grid-item */
@@ -379,7 +435,7 @@
     #prod4 img,
     #prod5 img,
     #prod6 img {
-        max-width: 350px;
+        max-width: 500px;
         margin-top: 2rem;
         padding: 0 2rem;
     }
@@ -487,6 +543,13 @@
         margin: auto 0 auto 2rem;
     }
 
+    #animated-products {
+        grid-row: 7;
+        grid-column: 1 / span 2;
+        max-width: 450px;
+        margin: 4rem auto 0 auto;
+    }
+
     /* Max-bredd för bilder */
     #beans1 img,
     #beans2 img,
@@ -514,12 +577,7 @@
     #productimg {
         display: grid;
         grid-template-columns: 53% 47%;
-        align-items: center;
-    }
-
-    /* Marginal */
-    #dallahimg {
-        margin-left: 2rem;
+        margin: 5rem 2rem 0 0;
     }
 
     /* Postion och styling för grid-item */
@@ -538,61 +596,35 @@
         text-align: left;
     }
 
-    /* Postion och styling för grid-item */
-    #coffeesection2 {
-        grid-row: 2;
-        grid-column: 1;
-        max-width: 55ch;
-        margin-right: 4rem;
-    }
-
-    /* Postion och styling för rubrik i grid-item */
-    #coffeesection2 h2 {
-        font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: 0.2rem;
-        margin: 4rem auto 0;
-        line-height: 3.2rem;
-        text-align: left;
-    }
-
     /* Marginal för grid-item */
     #coffee1 {
         margin-top: 12rem;
+        min-height: 0 !important;
+    }
+
+    #product-video1,
+    #product-video2,
+    #productimg,
+    #small-prod,
+    #coffee2 {
+        min-height: 0 !important;
     }
 
     /* Postion och styling för grid-item */
     #coffee3 {
         grid-column: 2;
-        margin-top: 15rem;
+        margin-top: 14rem;
         margin-right: 2rem;
+        min-height: 0 !important;
     }
 
     /* Storlek och palcering för video */
     video {
-        width: 100%;
-        max-width: 494px;
+        width: 95%;
         height: auto;
-        grid-column: 2;
+        grid-column: 1 / span 2;
         grid-row: 2;
-        margin: 4rem auto 0 auto;
-    }
-
-    /* Postion och styling för grid-item */
-    #beans6 {
-        grid-row: 2;
-        grid-column: 2;
-        display: flex;
-        align-items: flex-end;
-        margin-bottom: 4rem;
-        justify-content: center;
-        z-index: -1;
-    }
-
-    /* Minskar bredd och sätter max-bredd på bild */
-    #beans6 img {
-        width: 80%;
-        max-width: 550px;
+        margin: 2rem 0 0 0;
     }
 
     /* Klass för opacitet när mobilmeny öppnas (JS) */
@@ -625,7 +657,8 @@
     }
 
     /* Hoverfärg för knapp */
-    #firstbtn:hover {
+    #firstbtn:hover,
+    #news:hover {
         background-color: #8C3E14;
     }
 
@@ -641,7 +674,7 @@
         background-color: #9C4517;
         border: none;
         border-radius: 5px;
-        margin: 2rem 0 0;
+        margin: 2rem 0 2rem 0;
         cursor: pointer;
         padding: 0 1rem;
     }
@@ -754,6 +787,29 @@
         color: #7A4A31;
     }
 
+    #newsletter {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 2rem;
+        text-align: center;
+        color: white;
+        background-color: #9C4517;
+        font-size: 1.2rem;
+        z-index: 3;
+    }
+
+    #newsletter a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    /* Döljer mobiltext */
+    #mobilenews {
+        display: none;
+    }
+
     /* Styling och position för varukorgsikon i header */
     header .fa-basket-shopping {
         font-size: 22px !important;
@@ -808,30 +864,30 @@
     /* Margin för paragrafer i sektioner */
     section p {
         margin: 2.2rem auto;
-        max-width: 55ch;
+        max-width: 75ch;
     }
 
     /* Styling för rubriker */
     h1 {
-        font-size: 3.6rem;
+        font-size: 3rem;
         font-family: "Montserrat", 'Roboto', Helvetica, sans-serif;
         color: black;
         font-weight: 700;
         text-align: center;
         margin: 4rem 0 0 0;
         letter-spacing: 0.5rem;
-        line-height: 4.8rem;
+        line-height: 4rem;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.6rem;
         font-family: "Montserrat", 'Roboto', Helvetica, sans-serif;
         color: black;
         font-weight: 600;
         letter-spacing: 0.2rem;
         text-align: center;
         margin: 4rem 0 0 0;
-        line-height: 4.2rem;
+        line-height: 3.6rem;
     }
 
     h3 {
@@ -841,7 +897,7 @@
         font-weight: 600;
         letter-spacing: 0.2rem;
         margin: 4rem 0 0 0;
-        line-height: 3.6rem;
+        line-height: 3.4rem;
     }
 
     h4 {
@@ -851,7 +907,7 @@
         font-weight: 600;
         letter-spacing: 0.2rem;
         margin: 4rem 0 0 0;
-        line-height: 3.2rem;
+        line-height: 3rem;
     }
 
     /* Döljer mobil-meny */
@@ -956,22 +1012,28 @@
         flex-direction: column;
         align-content: center;
         align-items: center;
-        margin: 99px auto 0;
     }
 
     #breadcrumbs {
         left: 10%;
-        top: 140px;
         margin-right: 10%;
     }
 
-    #coffeesection {
-        margin: 12rem auto 0 auto;
+    #search {
+        left: 2rem;
     }
 
-    #coffeesection2 {
-        margin-top: 2rem;
-        margin-right: 0;
+    #searchbtn {
+        left: 19rem;
+        width: 2rem;
+    }
+
+    nav a {
+        padding: 0;
+    }
+
+    #coffeesection {
+        margin: 8rem auto 0 auto;
     }
 
     h2 {
@@ -980,6 +1042,7 @@
 
     #storyhead {
         margin-bottom: 2rem;
+        margin-top: 8rem;
     }
 
     #flex h2 {
@@ -989,6 +1052,75 @@
     video {
         margin: 6rem 0 0 0;
         max-width: 819.19px;
+        width: 100%;
+    }
+
+    #item2 {
+        margin: 0 auto 5rem auto;
+    }
+
+    #item2 img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    blockquote p {
+        margin: 0 0 0 18% !important;
+    }
+
+    #prod1,
+    #prod2,
+    #prod3,
+    #prod4,
+    #prod5,
+    #prod6 {
+        margin: 5rem auto;
+    }
+
+    #coffee1 {
+        margin-top: 5rem;
+    }
+
+    #coffee3 {
+        margin-top: 4rem;
+        margin-right: 0;
+    }
+
+    #beans1,
+    #beans2,
+    #beans3,
+    #beans4 {
+        margin: 2rem auto;
+    }
+
+    #beans5 {
+        display: none;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+
+    #productimg {
+        margin: 0;
+    }
+}
+
+/* Styling för skärmar mindre än 600px */
+@media screen and (max-width: 600px) {
+
+    /* Minskar text-storlek */
+    body {
+        font-size: 1.6rem;
+    }
+
+    main {
+        margin: 127px auto 0 auto;
+    }
+
+    #breadcrumbs {
+        top: 170px;
     }
 
     /* Döljer menylänkar i nav för datorläge */
@@ -1004,7 +1136,7 @@
         left: 0;
         top: 77px;
         height: 100vh;
-        width: 280px;
+        width: 100%;
         z-index: 2;
     }
 
@@ -1133,94 +1265,33 @@
         margin: 0 1rem 0 0;
     }
 
-    #item2 {
-        margin: 0 auto 5rem auto;
-    }
-
-    #item2 img {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    blockquote p {
-        margin: 0 0 0 18% !important;
-    }
-
-    #prod1,
-    #prod2,
-    #prod3,
-    #prod4,
-    #prod5,
-    #prod6 {
-        margin: 5rem auto;
-    }
-
-    #coffee1 {
-        margin-top: 10rem;
-    }
-
-    #coffee3 {
-        margin-top: 10rem;
-        margin-right: 0;
-    }
-
-    #beans1,
-    #beans2,
-    #beans3,
-    #beans4,
-    #beans5,
-    #beans6 {
-        margin: 2rem auto;
-    }
-
-    /* Full bredd och marginal till topp */
-    #beans6 img {
-        width: 100%;
-        margin-top: 2rem;
-    }
-
-    input,
-    select {
-        width: 100%;
-    }
-}
-
-/* Styling för skärmar mindre än 600px */
-@media screen and (max-width: 600px) {
-
-    /* Minskar text-storlek */
-    body {
-        font-size: 1.6rem;
-    }
-
-    /* Ökar storlek på bredd av mobilmeny */
-    #mobilenav {
-        width: 70vw;
+    #itemhead {
+        margin-top: 4rem;
     }
 
     /* Minskar storlek */
     h1 {
-        font-size: 3rem;
-        line-height: 4rem;
+        font-size: 2.6rem;
+        line-height: 3.6rem;
     }
 
     /* Minskar storlek */
     h2 {
-        font-size: 2.4rem;
-        line-height: 3.4rem;
+        font-size: 2.2rem;
+        line-height: 3.2rem;
         margin: 3rem 0 1rem 0;
     }
 
     /* Minskar storlek */
     h3 {
-        font-size: 2.2rem;
-        line-height: 3.2rem;
+        font-size: 2rem;
+        line-height: 3rem;
     }
 
     /* Minskar storlek */
     h4 {
-        font-size: 2rem;
-        line-height: 3rem;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
     }
 
     video {
@@ -1251,7 +1322,7 @@
     }
 
     #small-basket {
-        top: 2rem;
+        top: 8rem;
         right: 2.2rem;
         font-size: 1.4rem;
     }
@@ -1283,10 +1354,6 @@
         margin: 8rem auto 0 auto;
     }
 
-    #coffee1 {
-        margin-top: 10rem;
-    }
-
     #coffee2,
     #coffee3 {
         margin-top: 2rem;
@@ -1303,16 +1370,30 @@
         padding: 1rem;
     }
 
+    /* Döljer datortext */
+    #computernews {
+        display: none;
+    }
+
+    /* Visar mobiltext */
+    #mobilenews {
+        display: block;
+    }
+
     /* Döljer artikelnummer och artikel-id i varukorgen/kassan */
     #article,
     .artID {
         display: none;
     }
 
-    /* Centerar text och ökar marginal till topp */
+    /* Tar bort border för bildspel */
+    .bx-wrapper {
+        margin-top: 10rem;
+    }
+
+    /* Centerar text och justerar padding */
     footer {
         text-align: center;
-        margin: 4rem 0;
         padding: 0.2rem 2rem 4rem 2rem;
     }
 

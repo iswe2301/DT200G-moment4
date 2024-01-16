@@ -29,6 +29,13 @@
 <body>
     <div></div>
 
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt
+            första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
+
     <!-- Header -->
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
@@ -98,23 +105,50 @@
             <button onclick="addToBasket(this, '04', 'Roastery Mekka Clear Cup', '109', 'images/cup2_mini.jpg', true)"
                 id="buybtn">Lägg till i varukorgen <i class="fa fa-basket-shopping"></i></button>
             <span id="notify"></span>
+
+            <button class="accordion">Egenskaper <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <p><strong>Material: </strong>100 % glas.<br>
+                    <strong>Design: </strong>Modern och stilren.<br>
+                    <strong>Förpackningens innehåll: </strong>En (1) Roastery Mekka Clear Cup i transparent glas.
+                </p>
+            </div>
+            <button class="accordion">Specifikationer <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <ul>
+                    <li>Diameter: 8 cm</li>
+                    <li>Höjd: 7.5 cm</li>
+                    <li>Vikt: 188 gram</li>
+                    <li>Volym: 230 ml</li>
+                </ul>
+            </div>
+            <button class="accordion">Hållbarhet och Kvalitet <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <p>Vi på Roastery Mekka strävar efter att erbjuda produkter av högsta kvalitet. Varje kopp är noga
+                    kontrollerad för att säkerställa att den uppfyller våra standarder.
+                </p>
+                <p>Roastery Mekka Clear Cup är lättskött och tål maskindisk. Dess genomskinliga glas gör det enkelt att
+                    hålla koll
+                    på koppens renhet.
+                </p>
+            </div>
         </section>
 
         <!-- Produktbilder i bildspel som visas genom Lightbox, lazy load -->
         <div id="productimg">
             <div id="small-prod">
-                <div id="coffee1">
+                <div id="coffee1" style="min-height: 338px;">
                     <a href="images/cup4.jpg" data-lightbox="coffee-images">
                         <!-- WebP-version -->
                         <picture>
                             <source srcset="images/cup4_small.webp" type="image/webp">
                             <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
-                            <img fetchpriority="high" src="images/cup4_small.jpg" width="450" height="338"
-                                alt="Kaffekopp Roastery Mekka Clear Cup">
+                            <img src="images/cup4_small.jpg" width="450" height="338"
+                                alt="Kaffekopp Roastery Mekka Clear Cup" loading="lazy">
                         </picture>
                     </a>
                 </div>
-                <div id="coffee2">
+                <div id="coffee2" style="min-height: 338px;">
                     <a href="images/cup5.jpg" data-lightbox="coffee-images">
                         <!-- WebP-version -->
                         <picture>
@@ -126,49 +160,19 @@
                     </a>
                 </div>
             </div>
-            <div id="coffee3">
+            <div id="coffee3" style="min-height: 814px;">
                 <a href="images/cup6.jpg" data-lightbox="coffee-images">
                     <!-- WebP-version -->
                     <picture>
                         <source srcset="images/cup6_small.webp" type="image/webp">
                         <!-- Fallback till PNG om webbläsaren inte stöder WebP -->
-                        <img src="images/cup6_small.png" width="380" height="600"
-                            alt="Kaffekopp Roastery Mekka Clear Cup" loading="lazy">
+                        <img fetchpriority="high" src="images/cup6_small.png" width="450" height="814"
+                            alt="Kaffekopp Roastery Mekka Clear Cup">
                     </picture>
                 </a>
             </div>
         </div>
 
-        <!-- Sektion med underrubriker, o-ordnad lista och paragrafer -->
-        <section id="coffeesection2">
-            <h4>Egenskaper</h4>
-            <p><strong>Material: </strong>100 % glas.<br>
-                <strong>Design: </strong>Modern och stilren.<br>
-                <strong>Förpackningens innehåll: </strong>En (1) Roastery Mekka Clear Cup i transparent glas.
-            </p>
-            <h4>Specifikationer</h4>
-            <ul>
-                <li>Diameter: 8 cm</li>
-                <li>Höjd: 7.5 cm</li>
-                <li>Vikt: 188 gram</li>
-                <li>Volym: 230 ml</li>
-            </ul>
-            <h4>Hållbarhet och Kvalitet</h4>
-            <p>Vi på Roastery Mekka strävar efter att erbjuda produkter av högsta kvalitet. Varje kopp är noga
-                kontrollerad för att säkerställa att den uppfyller våra standarder.
-            </p>
-            <p>Roastery Mekka Clear Cup är lättskött och tål maskindisk. Dess genomskinliga glas gör det enkelt att
-                hålla koll
-                på koppens renhet.
-            </p>
-        </section>
-
-        <!-- Bild som visas i webp/png beroende på webbläsarens kompabilitet -->
-        <picture id="beans6">
-            <source type="image/webp" srcset="images/freebeans.webp">
-            <source type="image/png" srcset="images/freebeans.png">
-            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
-        </picture>
     </main>
 
     <!-- Footer med diverse länkar -->
@@ -189,6 +193,7 @@
                     <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
                 </ul>
             </div>
             <div>

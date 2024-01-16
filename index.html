@@ -27,6 +27,13 @@
 <body>
     <div></div>
 
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt
+            första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
+
     <!-- Header -->
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
@@ -78,11 +85,19 @@
         </form>
     </nav>
 
-    <!-- Picturetagg med olika storlekar på bakgrundsbild som visas beroende på skärmstorlek -->
+    <!-- Picturetagg med olika storlekar på bakgrundsbild som visas beroende på skärmstorlek, webp/jpg -->
     <picture id="background">
-        <source type="image/jpeg" media="(min-width: 701px) and (max-width: 1200px)" srcset="images/beans_medium.jpg">
-        <source type="image/jpeg" media="(max-width: 700px)" srcset="images/beans_small.jpg">
-        <img id="headerimg" src="images/beans_large.jpg" alt="Kaffebönor">
+        <source type="image/webp" media="(min-width: 1201px)" srcset="images/beans_large.webp" width="1920"
+            height="1080">
+        <source type="image/jpeg" media="(min-width: 1201px)" srcset="images/beans_large.jpg" width="1920"
+            height="1080">
+        <source type="image/webp" media="(min-width: 701px) and (max-width: 1200px)" srcset="images/beans_medium.webp"
+            width="1200" height="900">
+        <source type="image/jpeg" media="(min-width: 701px) and (max-width: 1200px)" srcset="images/beans_medium.jpg"
+            width="1200" height="900">
+        <source type="image/webp" media="(max-width: 700px)" srcset="images/beans_small.webp" width="700" height="1050">
+        <source type="image/jpeg" media="(max-width: 700px)" srcset="images/beans_small.jpg" width="700" height="1050">
+        <img id="headerimg" src="images/beans_large.jpg" width="1920" height="1080" alt="Kaffebönor">
     </picture>
 
     <!-- Huvudinnehåll -->
@@ -108,6 +123,47 @@
             <img fetchpriority="high" src="images/logo_large.svg" width="500" height="500" alt="Roastery Mekka logotyp">
         </div>
     </main>
+
+    <!-- Footer med diverse länkar -->
+    <footer>
+        <div id="footer-content">
+            <div>
+                <h2>Kontakt</h2>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Rosterivägen 4<br>123 45 Kaffeberga Sverige</li>
+                    <li><a href="tel:+4610123456"><i class="fa-solid fa-phone"></i> +46 10 123 456</a></li>
+                    <li><a href="mailto:info@roasterymekka.com"><i class="fa-regular fa-envelope"></i>
+                            info@roasterymekka.com</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Följ oss</h2>
+                <ul>
+                    <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Snabblänkar</h2>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="products.html">Våra produkter</a></li>
+                    <li><a href="about.html">Vår story</a></li>
+                    <li><a href="checkout.html">Kassa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom-foot">
+            <ul>
+                <li>&copy; 2023 Isa Westling</li>
+                <li><a href="about2.html">Om webbplatsen</a></li>
+                <li><a href="index.html">Integritetspolicy</a></li>
+                <li><a href="index.html">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 

@@ -29,6 +29,13 @@
 <body>
     <div></div>
 
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt
+            första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
+
     <!-- Header -->
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
@@ -100,6 +107,28 @@
             <button onclick="addToBasket(this, '02', 'Roastery Mekka Gold', '89', 'images/coffee2_mini.jpg', true)"
                 id="buybtn">Lägg till i varukorgen <i class="fa fa-basket-shopping"></i></button>
             <span id="notify"></span>
+
+            <button class="accordion">Egenskaper <i class="fa-solid fa-angle-down"></i></button>
+            <p class="text"><strong>Bönor: </strong>50 % Arabica-bönor, 50 % Robusta.<br>
+                <strong>Kryddning: </strong>En aromatisk touch av kanel.<br>
+                <strong>Rostning: </strong>Noggrant rostad för att framhäva den unika smakprofilen.
+            </p>
+            <button class="accordion">Specifikationer <i class="fa-solid fa-angle-down"></i></button>
+            <p class="text"><strong>Vikt: </strong> 200 g per förpackning<br>
+                <strong>Energi: </strong>2 kcal<br>
+                <strong>Protein: </strong> 1 g<br>
+                <strong>Fett: </strong> 1 g<br>
+                <strong>Kolhydrater: </strong>1 g
+            </p>
+            <button class="accordion">Hållbarhet och Kvalitet <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <p>Vi strävar efter hållbarhet och kvalitet. Varje förpackning av Roastery Mekka Gold är
+                    noga
+                    utformad för att bevara färskheten och de unika smakerna i varje böna.</p>
+                <p>Kaffet bör förvaras i försluten
+                    förpackning på en sval, mörk plats för att bevara smaken.
+                </p>
+            </div>
         </section>
 
         <!-- Produktbilder i bildspel som visas genom Lightbox, lazy load -->
@@ -111,8 +140,8 @@
                         <picture>
                             <source srcset="images/coffee5_small.webp" type="image/webp">
                             <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
-                            <img fetchpriority="high" src="images/coffee5_small.jpg" width="450" height="338"
-                                alt="Kaffe Roastery Mekka Gold">
+                            <img src="images/coffee5_small.jpg" width="450" height="338" alt="Kaffe Roastery Mekka Gold"
+                                loading="lazy">
                         </picture>
                     </a>
                 </div>
@@ -134,42 +163,13 @@
                     <picture>
                         <source srcset="images/coffee6_small.webp" type="image/webp">
                         <!-- Fallback till PNG om webbläsaren inte stöder WebP -->
-                        <img src="images/coffee6_small.png" width="380" height="600" alt="Kaffe Roastery Mekka Gold"
-                            loading="lazy">
+                        <img fetchpriority="high" src="images/coffee6_small.png" width="450" height="700"
+                            alt="Kaffe Roastery Mekka Gold">
                     </picture>
                 </a>
             </div>
         </div>
 
-        <!-- Sektion med underrubriker och paragrafer -->
-        <section id="coffeesection2">
-            <h4>Egenskaper</h4>
-            <p><strong>Bönor: </strong>50 % Arabica-bönor, 50 % Robusta.<br>
-                <strong>Kryddning: </strong>En aromatisk touch av kanel.<br>
-                <strong>Rostning: </strong>Noggrant rostad för att framhäva den unika smakprofilen.
-            </p>
-            <h4>Specifikationer och Näring<br> (per servering)</h4>
-            <p><strong>Vikt: </strong> 200 g per förpackning<br>
-                <strong>Energi: </strong>2 kcal<br>
-                <strong>Protein: </strong> 1 g<br>
-                <strong>Fett: </strong> 1 g<br>
-                <strong>Kolhydrater: </strong>1 g
-            </p>
-            <h4>Hållbarhet och Kvalitet</h4>
-            <p>Vi strävar efter hållbarhet och kvalitet. Varje förpackning av Roastery Mekka Gold är
-                noga
-                utformad för att bevara färskheten och de unika smakerna i varje böna.
-            </p>
-            <p>Kaffet bör förvaras i försluten
-                förpackning på en sval, mörk plats för att bevara smaken.</p>
-        </section>
-
-        <!-- Bild som visas i webp/png beroende på webbläsarens kompabilitet -->
-        <picture id="beans6">
-            <source type="image/webp" srcset="images/freebeans.webp">
-            <source type="image/png" srcset="images/freebeans.png">
-            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
-        </picture>
     </main>
 
     <!-- Footer med diverse länkar -->
@@ -190,6 +190,7 @@
                     <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
                 </ul>
             </div>
             <div>

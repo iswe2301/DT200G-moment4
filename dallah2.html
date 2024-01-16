@@ -29,6 +29,13 @@
 <body>
     <div></div>
 
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt
+            första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
+
     <!-- Header -->
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
@@ -100,6 +107,34 @@
                 onclick="addToBasket(this, '06', 'Roastery Mekka Dallah Silver', '229', 'images/dallah2_mini.jpg', true)"
                 id="buybtn">Lägg till i varukorgen <i class="fa fa-basket-shopping"></i></button>
             <span id="notify"></span>
+
+            <button class="accordion">Egenskaper <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <p><strong>Material: </strong>100 % högkvalitativ metall.<br>
+                    <strong>Design: </strong>Handtillverkad i traditionell orientalisk form.<br>
+                    <strong>Förpackningens innehåll: </strong>En (1) Roastery Mekka Dallah i silverfärg.
+                </p>
+            </div>
+            <button class="accordion">Specifikationer <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <ul>
+                    <li>Färg: Silver</li>
+                    <li>Diameter: 8 cm</li>
+                    <li>Höjd: 9 cm</li>
+                    <li>Vikt: 380 gram</li>
+                    <li>Volym: 425 ml</li>
+                </ul>
+            </div>
+            <button class="accordion">Hållbarhet och Kvalitet <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <p>Vi på Roastery Mekka strävar efter att erbjuda produkter av högsta kvalitet. Varje kopp är noga
+                    kontrollerad för att säkerställa att den uppfyller våra standarder.
+                </p>
+                <p>För att bevara kaffekannans glans och finish rekommenderar vi handdiskning med milda
+                    rengöringsmedel och
+                    undvikande av repande material.
+                </p>
+            </div>
         </section>
 
         <!-- Produktbilder i bildspel som visas genom Lightbox, lazy load -->
@@ -111,8 +146,8 @@
                         <picture>
                             <source srcset="images/dallah4_small.webp" type="image/webp">
                             <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
-                            <img fetchpriority="high" src="images/dallah4_small.jpg" width="450" height="338"
-                                alt="Kaffekanna Roastery Mekka Dallah Silver">
+                            <img src="images/dallah4_small.jpg" width="450" height="338"
+                                alt="Kaffekanna Roastery Mekka Dallah Silver" loading="lazy">
                         </picture>
                     </a>
                 </div>
@@ -134,43 +169,13 @@
                     <picture>
                         <source srcset="images/dallah6_small.webp" type="image/webp">
                         <!-- Fallback till PNG om webbläsaren inte stöder WebP -->
-                        <img id="dallahimg" src="images/dallah6_small.png" width="380" height="600"
-                            alt="Kaffekanna Roastery Mekka Dallah Silver" loading="lazy">
+                        <img fetchpriority="high" id="dallahimg" src="images/dallah6_small.png" width="450" height="600"
+                            alt="Kaffekanna Roastery Mekka Dallah Silver">
                     </picture>
                 </a>
             </div>
         </div>
 
-        <!-- Sektion med underrubriker, o-ordnad lista och paragrafer -->
-        <section id="coffeesection2">
-            <h4>Egenskaper</h4>
-            <p><strong>Material: </strong>100 % högkvalitativ metall.<br>
-                <strong>Design: </strong>Handtillverkad i traditionell orientalisk form.<br>
-                <strong>Förpackningens innehåll: </strong>En (1) Roastery Mekka Dallah i silverfärg.
-            </p>
-            <h4>Specifikationer</h4>
-            <ul>
-                <li>Färg: Silver</li>
-                <li>Diameter: 8 cm</li>
-                <li>Höjd: 9 cm</li>
-                <li>Vikt: 380 gram</li>
-                <li>Volym: 425 ml</li>
-            </ul>
-            <h4>Hållbarhet och Kvalitet</h4>
-            <p>Vi på Roastery Mekka strävar efter att erbjuda produkter av högsta kvalitet. Varje kopp är noga
-                kontrollerad för att säkerställa att den uppfyller våra standarder.
-            </p>
-            <p>För att bevara kaffekannans glans och finish rekommenderar vi handdiskning med milda rengöringsmedel och
-                undvikande av repande material.
-            </p>
-        </section>
-
-        <!-- Bild som visas i webp/png beroende på webbläsarens kompabilitet -->
-        <picture id="beans6">
-            <source type="image/webp" srcset="images/freebeans.webp">
-            <source type="image/png" srcset="images/freebeans.png">
-            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
-        </picture>
     </main>
 
     <!-- Footer med diverse länkar -->
@@ -191,6 +196,7 @@
                     <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
                 </ul>
             </div>
             <div>

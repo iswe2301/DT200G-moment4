@@ -14,6 +14,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
         rel="preload" as="style">
+    <!-- Skript och CSS till bildspel -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
     <script src="javascript/main.js" defer></script>
     <script src="javascript/webshop.js" defer></script>
     <script src="https://kit.fontawesome.com/0517951e44.js" crossorigin="anonymous" defer></script>
@@ -26,6 +30,13 @@
 
 <body id="whitebackground">
     <div></div>
+
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt
+            första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
 
     <!-- Header -->
     <header id="computerhead">
@@ -78,8 +89,43 @@
         </form>
     </nav>
 
-    <!-- Huvudinnehåll -->
-    <main>
+    <!-- Bildspel -->
+    <div class="bx-wrapper" style="min-width: 100%; min-height:450px;">
+        <ul class="bxslider">
+            <li>
+                <picture>
+                    <source type="image/webp" media="(min-width: 601px)" srcset="images/header1.webp">
+                    <source type="image/jpg" media="(min-width: 601px)" srcset="images/header1.jpg">
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/header1_small.webp">
+                    <source type="image/jpg" media="(max-width: 600px)" srcset="images/header1_small.jpg">
+                    <img fetchpriority="high" src="images/header1.jpg" width="1920" height="1440"
+                        alt="Produktbild kaffekopp och kaffekanna framför brasa">
+                </picture>
+            </li>
+            <li style="display: none;">
+                <picture>
+                    <source type="image/webp" media="(min-width: 601px)" srcset="images/header2.webp">
+                    <source type="image/jpg" media="(min-width: 601px)" srcset="images/header2.jpg">
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/header2_small.webp">
+                    <source type="image/jpg" media="(max-width: 600px)" srcset="images/header2_small.jpg">
+                    <img src="images/header2.jpg" width="1920" height="1440"
+                        alt="Produktbild kaffekopp, kaffe och kaffebönor på träbricka" loading="lazy">
+                </picture>
+            </li>
+            <li style="display: none;">
+                <picture>
+                    <source type="image/webp" media="(min-width: 601px)" srcset="images/header3.webp">
+                    <source type="image/jpg" media="(min-width: 601px)" srcset="images/header3.jpg">
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/header3_small.webp">
+                    <source type="image/jpg" media="(max-width: 600px)" srcset="images/header3_small.jpg">
+                    <img src="images/header3.jpg" width="1920" height="1440"
+                        alt="Produktbild kaffekopp, kaffebönor och kaffekanna på träplankor" loading="lazy">
+                </picture>
+            </li>
+        </ul>
+    </div>
+
+    <main id="product-main">
         <!-- Huvudrubrik -->
         <h1 id="itemhead">VÅRA PRODUKTER</h1>
         <!-- Underrubrik -->
@@ -92,8 +138,8 @@
                 <picture>
                     <source type="image/webp" srcset="images/mekkaselection.webp">
                     <source type="image/png" srcset="images/mekkaselection.png">
-                    <img fetchpriority="high" src="images/mekkaselection.png" width="500" height="500"
-                        alt="Kaffe Mekka Selection">
+                    <img src="images/mekkaselection.png" width="500" height="500" alt="Kaffe Mekka Selection"
+                        loading="lazy">
                 </picture>
             </a>
         </div>
@@ -184,6 +230,7 @@
                     <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
                 </ul>
             </div>
             <div>

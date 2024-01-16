@@ -29,6 +29,13 @@
 <body>
     <div></div>
 
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt
+            första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
+
     <!-- Header -->
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
@@ -97,9 +104,32 @@
                 <span id="price">119 SEK</span>
             </p>
             <button
-                onclick="addToBasket(this, '01', 'Roastery Mekka Selection', '119', 'images/coffee1_mini.jpg', true)"
+                onclick="addToBasket(this, '6789', 'Roastery Mekka Selection', '119', 'images/coffee1_mini.jpg', true)"
                 id="buybtn">Lägg till i varukorgen <i class="fa fa-basket-shopping"></i></button>
             <span id="notify"></span>
+
+            <button class="accordion">Egenskaper <i class="fa-solid fa-angle-down"></i></button>
+            <p class="text"><strong>Bönor: </strong>100 % Arabica-bönor.<br>
+                <strong>Kryddning: </strong>En balanserad dos av kardemumma.<br>
+                <strong>Rostning: </strong>Delikat rostad för att framhäva varje arom.
+            </p>
+            <button class="accordion">Specifikationer <i class="fa-solid fa-angle-down"></i></button>
+            <p class="text"><strong>Vikt: </strong> 450 g per förpackning<br>
+                <strong>Energi: </strong>20 kcal<br>
+                <strong>Protein: </strong> 1 g<br>
+                <strong>Fett: </strong> 1 g<br>
+                <strong>Kolhydrater: </strong>3 g
+            </p>
+            <button class="accordion">Hållbarhet och Kvalitet <i class="fa-solid fa-angle-down"></i></button>
+            <div class="text">
+                <p>Vi strävar efter hållbarhet och kvalitet. Varje förpackning av Roastery Mekka
+                    Selection är
+                    noga
+                    utformad för att bevara färskheten och de unika smakerna i varje böna.</p>
+                <p>Kaffet bör förvaras i försluten
+                    förpackning på en sval, mörk plats för att bevara smaken.
+                </p>
+            </div>
         </section>
 
         <!-- Produktbilder i bildspel som visas genom Lightbox, lazy load -->
@@ -111,8 +141,8 @@
                         <picture>
                             <source srcset="images/coffee2_small.webp" type="image/webp">
                             <!-- Fallback till JPEG om webbläsaren inte stöder WebP -->
-                            <img fetchpriority="high" src="images/coffee2_small.jpg" width="450" height="338"
-                                alt="Kaffe Roastery Mekka Selection">
+                            <img src="images/coffee2_small.jpg" width="450" height="338"
+                                alt="Kaffe Roastery Mekka Selection" loading="lazy">
                         </picture>
                     </a>
                 </div>
@@ -134,50 +164,18 @@
                     <picture>
                         <source srcset="images/coffee3_small.webp" type="image/webp">
                         <!-- Fallback till PNG om webbläsaren inte stöder WebP -->
-                        <img src="images/coffee3_small.png" width="380" height="600"
-                            alt="Kaffe Roastery Mekka Selection" loading="lazy">
+                        <img fetchpriority="high" src="images/coffee3_small.png" width="450" height="800"
+                            alt="Kaffe Roastery Mekka Selection">
                     </picture>
                 </a>
             </div>
+            <!-- Produktfilm i webp/mp4 beroende på stöd, poster innan laddning, fallback-text -->
+            <video id="product-video2" controls preload="metadata">
+                <source src="videos/productvideo.mp4" type="video/mp4">
+                <source src="videos/productvideo.webm" type="video/webm">
+                Din webbläsare stödjer inte video-taggen.
+            </video>
         </div>
-
-        <!-- Produktfilm i webp/mp4 beroende på stöd, poster innan laddning, fallback-text -->
-        <video id="product-video2" controls preload="metadata">
-            <source src="videos/productvideo.mp4" type="video/mp4">
-            <source src="videos/productvideo.webm" type="video/webm">
-            Din webbläsare stödjer inte video-taggen.
-        </video>
-
-        <!-- Sektion med underrubriker och paragrafer -->
-        <section id="coffeesection2">
-            <h2>Egenskaper</h2>
-            <p><strong>Bönor: </strong>100 % Arabica-bönor.<br>
-                <strong>Kryddning: </strong>En balanserad dos av kardemumma.<br>
-                <strong>Rostning: </strong>Delikat rostad för att framhäva varje arom.
-            </p>
-            <h2>Specifikationer och Näring<br> (per servering)</h2>
-            <p><strong>Vikt: </strong> 450 g per förpackning<br>
-                <strong>Energi: </strong>20 kcal<br>
-                <strong>Protein: </strong> 1 g<br>
-                <strong>Fett: </strong> 1 g<br>
-                <strong>Kolhydrater: </strong>3 g
-            </p>
-            <h2>Hållbarhet och Kvalitet</h2>
-            <p>Vi strävar efter hållbarhet och kvalitet. Varje förpackning av Roastery Mekka
-                Selection är
-                noga
-                utformad för att bevara färskheten och de unika smakerna i varje böna.
-            </p>
-            <p>Kaffet bör förvaras i försluten
-                förpackning på en sval, mörk plats för att bevara smaken.</p>
-        </section>
-
-        <!-- Bild som visas i webp/png beroende på webbläsarens kompabilitet -->
-        <picture id="beans6">
-            <source type="image/webp" srcset="images/freebeans.webp">
-            <source type="image/png" srcset="images/freebeans.png">
-            <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
-        </picture>
 
     </main>
 
@@ -199,6 +197,7 @@
                     <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
                 </ul>
             </div>
             <div>

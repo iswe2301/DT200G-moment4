@@ -5,10 +5,16 @@ let menuBtnEl = document.querySelector(".menubtn");
 let containerEl = document.querySelector("div");
 let video1 = document.getElementById("product-video1");
 let video2 = document.getElementById("product-video2");
+let accordionEl = document.getElementsByClassName("accordion");
 
 // Händelselyssnare vid klick somm anropar funktioner
 menuBtnEl.addEventListener("click", transformMenu);
 menuBtnEl.addEventListener("click", dropDownMenu);
+
+// Lägger till händelselyssnare för varje accordion-element vid klick
+for (let i = 0; i < accordionEl.length; i++) {
+    accordionEl[i].addEventListener("click", displayText);
+}
 
 // Hämtar aktuell sökväg
 let currentPage = window.location.pathname;
@@ -28,6 +34,22 @@ if (currentPage.endsWith('/coffee1.html')) {
 // Funktion för att besöka produktsidan till senast besökta sida
 function goToProducts() {
     window.location.href = "products.html";
+}
+
+// Om aktuell sökväg slutar med produkt-sidan körs funktionen för bildspel
+if (currentPage.endsWith('/products.html')) {
+    // Bildspelsfunktion
+    $(document).ready(function () {
+        $('.bxslider').bxSlider({
+            auto: true,       // Aktiverar automatisk rullning
+            pause: 4000,      // Tidsförsening mellan bilderna (4 sekunder)
+            slideMargin: 0,    // Ställer in margin mellan bilderna till 0
+            onSliderLoad: function () {
+                // Visar de dolda bilderna efter att bildspelet har laddats
+                $('.bxslider li:hidden').show();
+            }
+        });
+    });
 }
 
 // Funktion för att växla mellan klassen cross samt opacity vid klick.
@@ -84,4 +106,21 @@ function showVideoPoster2() {
     }
     // Sätter poster som attribut på videon
     video2.setAttribute("poster", poster);
+}
+
+// Funktion för att visa text uner knapp
+function displayText() {
+    // Hämtar nästa element efter knappen, som är texten
+    let text = this.nextElementSibling;
+
+    // Om texten är synligt, döljs den vid klick, annars visas den. Byter ikon vid klick.
+    if (text.style.display === "block") {
+        text.style.display = "none";
+        this.querySelector("i").classList.remove("fa-angle-up");
+        this.querySelector("i").classList.add("fa-angle-down");
+    } else {
+        text.style.display = "block";
+        this.querySelector("i").classList.remove("fa-angle-down");
+        this.querySelector("i").classList.add("fa-angle-up");
+    }
 }

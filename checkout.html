@@ -27,11 +27,17 @@
 <body>
     <div></div>
 
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
+
     <!-- Header -->
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
         <a href="index.html">
-            <img id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp">
+            <img fetchpriority="high" id="logo" src="images/logo.svg" width="80" height="80" alt="Roastery Mekka logotyp">
         </a>
         <!-- Formulär för sök-input med ikon -->
         <form id="search-box">
@@ -129,6 +135,13 @@
                     <label for="city">Ort:</label><br>
                     <input type="text" placeholder="Ange din ort" id="city" required><br>
 
+                    <div id="delivery-box">
+                        <input type="radio" id="delivery1" name="delivery" value="homedelivery" required>
+                        <label for="delivery1">Hemleverans 79 :-</label><br>
+                        <input type="radio" id="delivery2" name="delivery" value="postdelivery" required>
+                        <label for="delivery2">Postombud 39 :-</label><br>
+                    </div>
+
                     <!-- Rullist för att välja betalningstyp -->
                     <label for="payment">Betalningsmedel:</label><br>
                     <select id="payment" name="payment" required>
@@ -169,6 +182,7 @@
                     <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
                 </ul>
             </div>
             <div>

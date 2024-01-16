@@ -27,6 +27,13 @@
 <body>
     <div></div>
 
+    <div id="newsletter">
+        <p id="computernews">Ny kund? Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt på ditt
+            första köp.
+        </p>
+        <p id="mobilenews">Anmäl dig till vårt <a href="index.html">Nyhetsbrev</a> och få 20 % rabatt.</p>
+    </div>
+
     <!-- Header -->
     <header id="computerhead">
         <!-- Logotyp med länk till startsida -->
@@ -164,6 +171,15 @@
             <source type="image/png" srcset="images/freebeans.png">
             <img src="images/freebeans.png" width="600" height="321" alt="Kaffebönor Arabica" loading="lazy">
         </picture>
+
+        <!-- Animerad produktbild i gif/webp beroende på webbläsarens stöd, lazy load -->
+        <picture id="animated-products">
+            <source type="image/webp" srcset="images/animated-products.webp">
+            <source type="image/gif" srcset="images/animated-products.gif">
+            <img src="images/animated-products.gif" width="450" height="450"
+                alt="Roastery Mekka produktbilder i bildspel" loading="lazy">
+        </picture>
+
     </main>
 
     <!-- Footer med diverse länkar -->
@@ -184,6 +200,7 @@
                     <li><a href="index.html"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     <li><a href="index.html"><i class="fa-brands fa-square-twitter"></i>Twitter</a></li>
+                    <li><button id="news">Prenumerera på nyhetsbrev</button></li>
                 </ul>
             </div>
             <div>
